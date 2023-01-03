@@ -10,7 +10,7 @@ function randomChoice(array) {
   return array[Math.floor(Math.random() * array.length)];
 }
 function addBookToLibrary() {
-  // Creating book elements
+  // creating book elements
   let book = document.createElement("div");
   let spine = document.createElement("div");
   let spineTitle = document.createElement("span");
@@ -18,7 +18,7 @@ function addBookToLibrary() {
   let top = document.createElement("div");
   let cover = document.createElement("div");
 
-  // Add classes to each book component
+  // add classes to each book component
   book.classList.add("book");
   spine.classList.add("side", "spine");
   spineTitle.classList.add("spine-title");
@@ -34,10 +34,6 @@ function addBookToLibrary() {
   spine.appendChild(spineTitle);
   spine.appendChild(spineAuthor);
 
-  let spines = Object.values(document.querySelectorAll(".spine")); // GETS IT FROM THE HTML FILE HOW DO WE GET IT FROM THE JS FILE??
-  let covers = Object.values(document.querySelectorAll(".cover"));
-  let tops = Object.values(document.querySelectorAll(".top"));
-
   let availablePatterns = getRootCssStyles();
 
   let availableColors = [
@@ -50,22 +46,25 @@ function addBookToLibrary() {
     "midnightblue",
   ];
 
-  // assign a random height, pattern and colour to each book
-  spines.map(function (s, i) {
-    let randomHeight = getRandomInt(220, 290);
-    s.style.height = `${randomHeight}px`;
-    s.style.top = `${280 - randomHeight}px`;
+  // random spine height
+  let randomHeight = getRandomInt(220, 290);
+  spine.style.height = `${randomHeight}px`;
+  spine.style.top = `${280 - randomHeight}px`;
 
-    let randomPattern = randomChoice(availablePatterns);
-    s.style.backgroundImage = `var(${randomPattern})`;
+  // random spine pattern
+  let randomPattern = randomChoice(availablePatterns);
+  spine.style.backgroundImage = `var(${randomPattern})`;
 
-    let randomColor = randomChoice(availableColors);
-    s.style.backgroundColor = randomColor;
+  // random spine color
+  let randomColor = randomChoice(availableColors);
+  spine.style.backgroundColor = randomColor;
 
-    covers[i].style.height = `${randomHeight}px`;
-    covers[i].style.top = `${280 - randomHeight}px`;
+  // random ccover height
+  cover.style.height = `${randomHeight}px`;
+  cover.style.top = `${280 - randomHeight}px`;
 
-    tops[i].style.top = `${280 - randomHeight}px`;
-  });
+  // random top height
+  top.style.top = `${280 - randomHeight}px`;
 }
+
 addButton.addEventListener("click", addBookToLibrary);
