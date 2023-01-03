@@ -20,5 +20,11 @@ header {
 .logo {
   color: #76323f;
 }
-main {
+
+.addButton {
+  padding: 20px;
+}
+
+.bookshelf {
+  gap: 10px;
 }
