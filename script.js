@@ -11,6 +11,7 @@ function Book(title, author, pages, readStatus) {
 }
 
 function addBookToLibrary() {
+  // Creating book elements
   let book = document.createElement("div");
   let spine = document.createElement("div");
   let spineTitle = document.createElement("span");
@@ -18,6 +19,7 @@ function addBookToLibrary() {
   let top = document.createElement("div");
   let cover = document.createElement("div");
 
+  // Add classes to each book component
   book.classList.add("book");
   spine.classList.add("side", "spine");
   spineTitle.classList.add("spine-title");
