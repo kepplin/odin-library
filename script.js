@@ -26,6 +26,13 @@ overlay.addEventListener("click", () => {
   });
 });
 
+submitButton.addEventListener("click", () => {
+  const modals = document.querySelectorAll(".modal.active");
+  modals.forEach((modal) => {
+    closeModal(modal);
+  });
+});
+
 function openModal(modal) {
   if (modal == null) {
     return;
