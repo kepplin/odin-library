@@ -45,4 +45,8 @@ form {
   width: fit-content;
   padding: 20px;
   background-color: beige;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
