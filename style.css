@@ -79,6 +79,6 @@ form {
 main {
   background-image: url(img/bookshelfbg.jpg);
   background-repeat: repeat-y;
-  background-size: contain;
   background-position: center;
+  background-size: 1000px 850px;
 }

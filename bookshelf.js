@@ -34,6 +34,18 @@ function addBookToLibrary() {
   spine.appendChild(spineTitle);
   spine.appendChild(spineAuthor);
 
+  const title = document.getElementById("title").value;
+  const author = document.getElementById("author").value;
+  const pages = document.getElementById("pages").value;
+
+  let firstLetters = author
+    .split(" ")
+    .map((word) => word.charAt(0))
+    .join("");
+
+  spineTitle.textContent = title;
+  spineAuthor.textContent = firstLetters.toUpperCase();
+  // BELOW THIS (within the funcion) IS NOT MY OWN CODE
   let availablePatterns = getRootCssStyles();
 
   let availableColors = [
@@ -59,7 +71,7 @@ function addBookToLibrary() {
   let randomColor = randomChoice(availableColors);
   spine.style.backgroundColor = randomColor;
 
-  // random ccover height
+  // random cover height
   cover.style.height = `${randomHeight}px`;
   cover.style.top = `${280 - randomHeight}px`;
 
