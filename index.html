@@ -14,12 +14,12 @@
       <div class="logo"><h1>Library</h1></div>
     </header>
     <main>
-      <button class="addButton">Add Book</button>
+      <button data-modal-target="#modal" class="addButton">Add Book</button>
       <div class="modal" id="modal">
         <form>
           <div class="header">
             <h2>Add new book</h2>
-            <button>&times;</button>
+            <button data-close-button="">&times;</button>
           </div>
           <input
             type="text"
@@ -48,8 +48,8 @@
           </div>
           <button type="submit">Submit</button>
         </form>
-        <div id="overlay"></div>
       </div>
+      <div id="overlay"></div>
       <div class="bookshelf"></div>
     </main>
     <script type="module" src="bookshelf.js"></script>
