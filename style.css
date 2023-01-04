@@ -73,3 +73,10 @@ form {
   opacity: 1;
   pointer-events: all;
 }
+/* main */
+main {
+  background-image: url(img/bookshelfbg.jpg);
+  background-repeat: repeat-y;
+  background-size: contain;
+  background-position: center;
+}
