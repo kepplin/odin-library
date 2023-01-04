@@ -1,8 +1,8 @@
 const addButton = document.querySelector(".addButton");
 const bookShelf = document.querySelector(".bookshelf");
 const openModalButtons = document.querySelectorAll("[data-modal-target]");
-const closeModalButtons = document.querySelectorAll("[data-close-button]");
 const overlay = document.getElementById("overlay");
+const submitButton = document.querySelector(".submitButton");
 
 function Book(title, author, pages, readStatus) {
   this.title = title;
@@ -10,8 +10,6 @@ function Book(title, author, pages, readStatus) {
   this.pages = pages;
   this.readStatus = readStatus;
 }
-function displayForm() {}
-addButton.addEventListener("click", displayForm);
 
 // Pop up form
 openModalButtons.forEach((button) => {
@@ -24,13 +22,6 @@ openModalButtons.forEach((button) => {
 overlay.addEventListener("click", () => {
   const modals = document.querySelectorAll(".modal.active");
   modals.forEach((modal) => {
-    closeModal(modal);
-  });
-});
-
-closeModalButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const modal = button.closest(".modal");
     closeModal(modal);
   });
 });

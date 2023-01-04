@@ -67,4 +67,4 @@ function addBookToLibrary() {
   top.style.top = `${280 - randomHeight}px`;
 }
 
-addButton.addEventListener("click", addBookToLibrary);
+submitButton.addEventListener("click", addBookToLibrary);
