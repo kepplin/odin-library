@@ -69,9 +69,13 @@ function closeModal(modal) {
   modal.classList.remove("active");
   overlay.classList.remove("active");
 }
-// Not allowing negative pages to be entered
 
-// Listen for input event on numInput.
+// Pages validation
+
+// Not allowing negative pages to be entered using keycodes
+// 95, < 106 corresponds to Numpad 0 through 9
+// 47, < 58 corresponds to 0 through 9 on the Number Row
+// 8 is Backspace.
 pages.onkeydown = function (e) {
   if (
     !(
@@ -84,3 +88,11 @@ pages.onkeydown = function (e) {
     return false;
   }
 };
+// Not allowing number greater than 5000 or 0 to be entered
+pages.addEventListener("input", () => {
+  if (pages.value > 5000) {
+    pages.value = 5000;
+  } else if (pages.value == 0) {
+    pages.value = 1;
+  }
+});
