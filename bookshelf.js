@@ -11,7 +11,7 @@ function randomChoice(array) {
 }
 
 function addBookToLibrary() {
-  // creating book elements
+  // Creating book elements
   let book = document.createElement("div");
   let spine = document.createElement("div");
   let spineTitle = document.createElement("span");
@@ -19,7 +19,7 @@ function addBookToLibrary() {
   let top = document.createElement("div");
   let cover = document.createElement("div");
 
-  // add classes to each book component
+  // Add classes to each book component
   book.classList.add("book");
   spine.classList.add("side", "spine");
   spineTitle.classList.add("spine-title");
@@ -37,10 +37,9 @@ function addBookToLibrary() {
 
   const title = document.getElementById("title").value;
   const author = document.getElementById("author").value;
-  const pages = document.getElementById("pages").value;
   const checkbox = document.getElementById("read");
 
-  // style border depending on whether checkbox was checked
+  // Style border depending on whether checkbox was checked
   if (checkbox.checked) {
     spine.style.border = "4px solid green";
   } else {
@@ -55,7 +54,7 @@ function addBookToLibrary() {
   spineTitle.textContent = title;
   spineAuthor.textContent = firstLetters.toUpperCase();
 
-  // toggle between red and green border color when book is clicked (signifying read status)
+  // Toggle between red and green border color when book is clicked (signifying read status)
 
   let toggle = false;
 

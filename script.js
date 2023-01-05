@@ -60,6 +60,12 @@ function openModal(modal) {
   }
   modal.classList.add("active");
   overlay.classList.add("active");
+
+  // Resetting values when modal is opened for a fresh form
+  title.value = "";
+  author.value = "";
+  pages.value = "";
+  document.getElementById("read").checked = false;
 }
 
 function closeModal(modal) {
