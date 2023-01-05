@@ -9,6 +9,7 @@ function getRandomInt(min, max) {
 function randomChoice(array) {
   return array[Math.floor(Math.random() * array.length)];
 }
+
 function addBookToLibrary() {
   // creating book elements
   let book = document.createElement("div");

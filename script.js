@@ -11,6 +11,26 @@ function Book(title, author, pages, readStatus) {
   this.readStatus = readStatus;
 }
 
+const title = document.getElementById("title");
+const author = document.getElementById("author");
+const pages = document.getElementById("pages");
+
+function updateSubmitBtn() {
+  const titleVal = title.value.trim();
+  const authorVal = author.value.trim();
+  const pagesVal = pages.value.trim();
+
+  if (titleVal && authorVal && pagesVal) {
+    submitButton.removeAttribute("disabled");
+  } else {
+    submitButton.setAttribute("disabled", "disabled");
+  }
+}
+
+title.addEventListener("input", updateSubmitBtn);
+author.addEventListener("input", updateSubmitBtn);
+pages.addEventListener("input", updateSubmitBtn);
+
 // Pop up form
 openModalButtons.forEach((button) => {
   button.addEventListener("click", () => {
