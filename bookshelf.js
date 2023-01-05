@@ -40,6 +40,7 @@ function addBookToLibrary() {
   const pages = document.getElementById("pages").value;
   const checkbox = document.getElementById("read");
 
+  // style border depending on whether checkbox was checked
   if (checkbox.checked) {
     spine.style.border = "4px solid green";
   } else {
@@ -53,6 +54,20 @@ function addBookToLibrary() {
 
   spineTitle.textContent = title;
   spineAuthor.textContent = firstLetters.toUpperCase();
+
+  // toggle between red and green border color when book is clicked (signifying read status)
+  let toggle = false;
+
+  function toggleBorderColor() {
+    if (toggle) {
+      spine.style.borderColor = "red";
+    } else {
+      spine.style.borderColor = "green";
+    }
+    toggle = !toggle;
+  }
+  book.addEventListener("click", toggleBorderColor);
+
   // BELOW THIS (within the funcion) IS NOT MY OWN CODE
   let availablePatterns = getRootCssStyles();
 
