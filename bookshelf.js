@@ -56,6 +56,7 @@ function addBookToLibrary() {
   spineAuthor.textContent = firstLetters.toUpperCase();
 
   // toggle between red and green border color when book is clicked (signifying read status)
+
   let toggle = false;
 
   function toggleBorderColor() {
