@@ -38,6 +38,13 @@ function addBookToLibrary() {
   const title = document.getElementById("title").value;
   const author = document.getElementById("author").value;
   const pages = document.getElementById("pages").value;
+  const checkbox = document.getElementById("read");
+
+  if (checkbox.checked) {
+    spine.style.border = "4px solid green";
+  } else {
+    spine.style.border = "4px solid red";
+  }
 
   let firstLetters = author
     .split(" ")

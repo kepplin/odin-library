@@ -11,6 +11,7 @@ function Book(title, author, pages, readStatus) {
   this.readStatus = readStatus;
 }
 
+// Checks if form has been filled
 const title = document.getElementById("title");
 const author = document.getElementById("author");
 const pages = document.getElementById("pages");
