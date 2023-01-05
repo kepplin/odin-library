@@ -72,7 +72,7 @@ function closeModal(modal) {
   overlay.classList.remove("active");
 }
 
-// Pages validation
+// "Pages" input validation
 
 // Not allowing negative pages to be entered using keycodes
 // 95, < 106 corresponds to Numpad 0 through 9
@@ -90,7 +90,7 @@ pages.onkeydown = function (e) {
     return false;
   }
 };
-// Not allowing number greater than 5000 or 0 to be entered
+// Not allowing number greater than 5000 or number 0 to be entered
 pages.addEventListener("input", () => {
   if (pages.value > 5000) {
     pages.value = 5000;
@@ -99,6 +99,7 @@ pages.addEventListener("input", () => {
   }
 });
 
+// Random value functions for random styling
 function getRandomInt(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
@@ -155,7 +156,6 @@ function createBook() {
   spineAuthor.textContent = firstLetters.toUpperCase();
 
   // Toggle between red and green border color when book is clicked (signifying read status)
-
   let toggle = false;
 
   function toggleBorderColor() {
@@ -210,14 +210,17 @@ function Book(title, author, pages, read) {
   this.read = read;
 }
 
+// Making use of the constructor
 function addBookToLibrary(title, author, pages, read) {
   myLibrary.push(new Book(title, author, pages, read));
   renderBooks();
 }
 
+// Displaying the books
 function renderBooks() {
   myLibrary.map((book) => {
     createBook(book);
   });
 }
+
 submitButton.addEventListener("click", addBookToLibrary);
