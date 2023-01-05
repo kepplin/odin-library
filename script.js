@@ -222,5 +222,4 @@ function renderBooks() {
     createBook(book);
   });
 }
-
 submitButton.addEventListener("click", addBookToLibrary);
