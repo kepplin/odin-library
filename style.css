@@ -81,4 +81,5 @@ main {
   background-repeat: repeat-y;
   background-position-x: center;
   background-size: 1000px 850px;
+  overflow-y: scroll;
 }
