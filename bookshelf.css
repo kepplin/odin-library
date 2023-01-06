@@ -150,11 +150,16 @@
   /* Patterns from: https://projects.verou.me/css3patterns/ */
   background-image: var(--tartan);
   transform: rotateY(0deg) translateZ(0px);
+  display: grid;
+  grid-template-rows: 9fr 1fr;
+  justify-items: center;
 }
 
 .spine-title {
+  display: flex;
+  flex-wrap: wrap;
   margin: 2px;
-  position: absolute;
+  margin-top: 10px;
   top: 0px;
   left: 0px;
   font-size: 12px;
@@ -167,7 +172,6 @@
   position: absolute;
   color: goldenrod;
   bottom: 0px;
-  left: 20%; /* no idea why 20% centers it */
 }
 
 .top {
