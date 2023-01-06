@@ -169,6 +169,7 @@ function createBook() {
   book.addEventListener("click", toggleBorderColor);
 
   // BELOW THIS (within the funcion) IS NOT MY OWN CODE
+
   let availablePatterns = getRootCssStyles();
 
   let availableColors = [
@@ -218,8 +219,19 @@ function addBookToLibrary(title, author, pages, read) {
 
 // Displaying the books
 function renderBooks() {
-  myLibrary.map((book) => {
-    createBook(book);
+  // bookShelf.textContent = "";       // INCORRECT CODE, BUT I'LL LEAVE IT FOR LEARNING PURPOSES. Without bookShelf.textContent = "", the whole array myLibrary, is created. So if you have 5 elements in myLibrary, 5 books are created. However, with bookShelf.textContent = "", despite only one book being created, the books styling changes every time a new book is created, and its info (e.g. title, author, pages), becomes the same as the latest created book.
+  // console.log(typeof bookShelf);
+  // myLibrary.map((book) => {
+  //   createBook(book);
+  // });
+  // console.log(bookShelf);
+  // console.log(myLibrary);
+
+  // This block of code fixes the above issue as it gets the last iteration of myLibrary, and creates that.
+  myLibrary.forEach(function (i, index, array) {
+    if (index === array.length - 1) {
+      createBook();
+    }
   });
 }
 submitButton.addEventListener("click", addBookToLibrary);
