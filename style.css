@@ -75,11 +75,11 @@ form {
   opacity: 1;
   pointer-events: all;
 }
-/* main */
+/* main (check bookshelf.css styling)*/
 main {
-  background-image: url(img/bookshelfbg.jpg);
+  /* background-image: url(img/bookshelfbg.jpg);
   background-repeat: repeat-y;
   background-position-x: center;
-  background-size: 1000px 850px;
+  background-size: 1000px 850px; */
   overflow-y: scroll;
 }

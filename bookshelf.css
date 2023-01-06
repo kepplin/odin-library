@@ -115,10 +115,21 @@
 }
 
 .bookshelf {
-  width: 100%;
-  margin-top: 32px;
+  width: 750px;
   display: flex;
   flex-wrap: wrap;
+  margin-top: 32px;
+  row-gap: 50px;
+}
+main {
+  display: flex;
+  justify-content: center;
+  /* background-color: #c77700;
+  background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png"); */
+  /* background-color: #6b3200;
+  background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png"); */
+  background-color: #966f33;
+  background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");
 }
 
 .book {
