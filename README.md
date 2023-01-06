@@ -14,3 +14,4 @@ https://kepplin.github.io/odin-library/
 ## Credits:
 
 https://www.cssscript.com/animated-virtual-bookshelf/#google_vignette (Book styling + animations)
+https://www.transparenttextures.com/wood-pattern.html (timber texture)
