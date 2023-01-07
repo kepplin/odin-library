@@ -124,10 +124,11 @@ main {
   background-image: url(img/bookshelfbg.jpg);
   background-repeat: no-repeat;
   background-position-x: center;
-  background-size: 1000px 850px;
-  overflow-y: scroll;
-  justify-content: center;
+  background-size: 1000px 875px;
+  overflow-y: hidden;
   display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .book {
