@@ -142,9 +142,9 @@ function createBook() {
 
   // Style border depending on whether checkbox was checked
   if (checkbox.checked) {
-    spine.style.border = "4px solid green";
+    spine.style.border = "5px solid green";
   } else {
-    spine.style.border = "4px solid red";
+    spine.style.border = "5px solid red";
   }
 
   let firstLetters = author
