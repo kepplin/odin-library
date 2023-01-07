@@ -121,10 +121,12 @@
 }
 
 main {
-  background-image: url(img/bookshelfbg.jpg);
-  background-repeat: no-repeat;
+  background-color: rgba(138, 76, 22);
+  background-image: url(img/bookshelfbg.jpg),
+    url("https://www.transparenttextures.com/patterns/tileable-wood.png");
+  background-repeat: no-repeat, repeat;
   background-position-x: center;
-  background-size: 1000px 875px;
+  background-size: 1000px 875px, auto;
   overflow-y: hidden;
   display: flex;
   justify-content: center;
