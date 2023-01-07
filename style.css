@@ -33,6 +33,10 @@ header {
 }
 .addButton {
   padding: 20px;
+  border-radius: 100px;
+  background-color: #ffaa33;
+  font-weight: bold;
+  font-size: 1.1em;
 }
 .bookshelf {
   gap: 10px;
