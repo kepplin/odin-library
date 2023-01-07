@@ -118,6 +118,8 @@
   width: 800px;
   display: flex;
   flex-wrap: wrap;
+  gap: 10px;
+  transform: scale(0.95);
 }
 .bgContainer {
   background-image: url(img/bookshelfbg.jpg);
@@ -130,6 +132,7 @@
   box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000,
     5px 5px 15px 5px rgba(0, 0, 0, 0);
   overflow: hidden;
+  transform: scale(0.95);
 }
 main {
   background-color: #ffaa33;
