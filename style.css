@@ -19,7 +19,7 @@ header {
   z-index: 1;
   align-items: center;
   gap: 20px;
-  background-color: #c26042;
+  background-color: #ff8c00;
   background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");
 }
 .logo {
@@ -31,7 +31,6 @@ header {
 .bookshelf {
   gap: 10px;
 }
-
 /* modal */
 form {
   display: flex;

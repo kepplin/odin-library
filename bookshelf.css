@@ -119,15 +119,22 @@
   display: flex;
   flex-wrap: wrap;
 }
-
-main {
-  background-color: rgba(138, 76, 22);
-  background-image: url(img/bookshelfbg.jpg),
-    url("https://www.transparenttextures.com/patterns/tileable-wood.png");
-  background-repeat: no-repeat, repeat;
+.bgContainer {
+  background-image: url(img/bookshelfbg.jpg);
+  background-repeat: no-repeat;
   background-position-x: center;
-  background-size: 1000px 875px, auto;
-  overflow-y: hidden;
+  background-size: 1000px 875px;
+  width: 1000px;
+  height: 870px;
+  position: absolute;
+  box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
+  overflow: hidden;
+}
+main {
+  background-color: #ffaa33;
+  background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: flex-start;
