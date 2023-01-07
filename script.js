@@ -183,7 +183,7 @@ function createBook() {
   ];
 
   // random spine height
-  let randomHeight = getRandomInt(220, 290);
+  let randomHeight = getRandomInt(180, 250);
   spine.style.height = `${randomHeight}px`;
   spine.style.top = `${280 - randomHeight}px`;
 
