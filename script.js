@@ -36,6 +36,7 @@ openModalButtons.forEach((button) => {
   });
 });
 
+// modal closes when overlay is clicked
 overlay.addEventListener("click", () => {
   const modals = document.querySelectorAll(".modal.active");
   modals.forEach((modal) => {

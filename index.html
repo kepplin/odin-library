@@ -20,32 +20,34 @@
           <div class="header">
             <h2>Add new book</h2>
           </div>
-          <input
-            type="text"
-            id="title"
-            name="title"
-            placeholder="Title"
-            maxlength="80"
-            required
-          />
-          <input
-            type="text"
-            id="author"
-            name="author"
-            placeholder="Author"
-            maxlength="80"
-            required
-          />
-          <input
-            type="number"
-            id="pages"
-            name="pages"
-            placeholder="Pages"
-            min="1"
-            max="5000"
-            required
-          />
-          <div>
+          <div class="inputContainer">
+            <input
+              type="text"
+              id="title"
+              name="title"
+              placeholder="Title"
+              maxlength="80"
+              required
+            />
+            <input
+              type="text"
+              id="author"
+              name="author"
+              placeholder="Author"
+              maxlength="80"
+              required
+            />
+            <input
+              type="number"
+              id="pages"
+              name="pages"
+              placeholder="Pages"
+              min="1"
+              max="5000"
+              required
+            />
+          </div>
+          <div class="checkboxContainer">
             <label for="read">Have you read it?</label>
             <input type="checkbox" name="read" id="read" />
           </div>
