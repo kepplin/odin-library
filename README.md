@@ -18,7 +18,7 @@ With this task, I wanted to be unique so I decided to add books instead of just 
 
 1. The submit button is clicked (from the popup form)
 2. The function addBookToLibrary runs, in which a new object is created using a constructor function, this object is placed into the empty array "myLibrary". This function also invokes the function renderBooks.
-3. Within renderBooks, my library.forEach gets the last book in the arry. The function createBook is called.
+3. Within renderBooks, myLibrary.forEach gets the last book in the array. The function createBook is called.
 4. createBook, creates the individual book elements in the DOM, appends the elements to one another to form a full on book and then appends the full book to the empty div with a class of "bookshelf" (declared in HTML). It also styles the books giving them random patterns and heights.
 
 I tried to get the background image (the bookcase) to repeat, essentially adding more layers when enough books were added, but it always ended up looking funky, so then I attempted to create my own bookshelf in CSS, but it was hard to style, so I just settled for a max book limit. One day, when I am a more experienced programmer, I will come back to this, and implemenet a repeating bookshelf.
