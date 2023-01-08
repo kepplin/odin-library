@@ -6,6 +6,12 @@ https://kepplin.github.io/odin-library/
 
 With this task, I wanted to be unique so I decided to add books instead of just cards, but styling this was a horrid experience.
 
+## Instructions
+
+Press the add book button to open up a form. Fill in the form and press submit to add a book to the bookshelf. If you check the 'read book?' checkbox in the form, the book's border color will be green, otherwise it will be red.
+Pressing a book in the bookshelf toggles its border color.
+Hovering over a book rotates it to display a cover with all the info you inputed into the form.
+
 ## How it Works:
 
 1. The submit button is clicked (from the popup form)
