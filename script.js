@@ -4,8 +4,9 @@ let myLibrary = [];
 
 const bookShelf = document.querySelector(".bookshelf");
 const openModalButtons = document.querySelectorAll("[data-modal-target]");
-const overlay = document.getElementById("overlay");
+const overlay = document.querySelector(".overlay");
 const submitButton = document.querySelector(".submitButton");
+const main = document.querySelector("main");
 
 // Checks if form has been filled
 const title = document.getElementById("title");
@@ -226,10 +227,27 @@ function renderBooks() {
   // });
 
   // This block of code fixes the above issue as it gets the last iteration of myLibrary, and creates that.
-  myLibrary.forEach(function (i, index, array) {
-    if (index === array.length - 1) {
-      createBook();
-    }
-  });
+  if (myLibrary.length < 40) {
+    myLibrary.forEach(function (i, index, array) {
+      if (index === array.length - 1) {
+        createBook();
+      }
+    });
+  } else {
+    let errorText = document.createElement("h1");
+    let errorOverlay = document.createElement("div");
+
+    errorOverlay.classList.add("overlay", "active");
+    errorText.classList.add("errorText");
+    errorText.textContent = "Book limit reached!";
+
+    main.appendChild(errorOverlay);
+    errorOverlay.appendChild(errorText);
+
+    setTimeout(() => {
+      errorOverlay.remove();
+      errorText.remove();
+    }, 2000);
+  }
 }
 submitButton.addEventListener("click", addBookToLibrary);

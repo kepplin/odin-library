@@ -104,7 +104,7 @@ input {
 .modal.active {
   transform: translate(-50%, -50%) scale(1);
 }
-#overlay {
+.overlay {
   position: fixed;
   opacity: 0;
   top: 0;
@@ -116,7 +116,20 @@ input {
   transition: 200ms ease-in-out;
   z-index: 0;
 }
-#overlay.active {
+.overlay.active {
   opacity: 1;
   pointer-events: all;
+}
+.errorText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  color: white;
+  transition: 200ms;
+  background-color: black;
+  border: 1px solid black;
+  padding: 20px;
+  border-radius: 20px;
 }
