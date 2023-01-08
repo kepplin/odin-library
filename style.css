@@ -41,7 +41,8 @@ header {
 }
 .addButton:hover {
   cursor: pointer;
-  background-color: rgba(148, 104, 43, 0.7);
+  transform: scale(1.1);
+  border: 3px solid black;
 }
 /* modal */
 form {
