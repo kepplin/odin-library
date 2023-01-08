@@ -32,5 +32,7 @@ Full bookshelf
 ## Credits:
 
 https://www.cssscript.com/animated-virtual-bookshelf/#google_vignette (Book styling + animations)
+
 https://www.transparenttextures.com/wood-pattern.html (timber texture)
+
 https://css.gg/trash (trashcan icon)
