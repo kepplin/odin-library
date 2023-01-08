@@ -18,9 +18,6 @@ function updateSubmitBtn() {
   const authorVal = author.value.trim();
   const pagesVal = pages.value.trim();
 
-  console.log(titleVal);
-  console.log(authorVal);
-  console.log(pagesVal);
   if (titleVal !== "" && authorVal !== "" && pagesVal !== "") {
     submitButton.removeAttribute("disabled");
   } else {
@@ -49,7 +46,7 @@ overlay.addEventListener("click", () => {
   });
 });
 
-submitButton.addEventListener("click", () => {
+submitButton.addEventListener("click", (e) => {
   const modals = document.querySelectorAll(".modal.active");
   modals.forEach((modal) => {
     closeModal(modal);
@@ -254,4 +251,11 @@ function renderBooks() {
     }, 2000);
   }
 }
+
+window.addEventListener("keydown", function (e) {
+  if (e.key == "Enter") {
+    e.preventDefault();
+    return false;
+  }
+});
 submitButton.addEventListener("click", addBookToLibrary);
