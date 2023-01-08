@@ -23,7 +23,7 @@ With this task, I wanted to be unique so I decided to add books instead of just 
 
 I tried to get the background image (the bookcase) to repeat, essentially adding more layers when enough books were added, but it always ended up looking funky, so then I attempted to create my own bookshelf in CSS, but it was hard to style, so I just settled for a max book limit. One day, when I am a more experienced programmer, I will come back to this, and implemenet a repeating bookshelf.
 
-![demoemptybookshelf2](https://user-images.githubusercontent.com/107027281/211184422-e17188ed-5679-4a06-8b76-45363085b1c4.png)
+![demoemptybookshelf2](https://user-images.githubusercontent.com/107027281/211195172-90af918c-1394-467e-afb3-e1f63974e7f0.png)
 Empty bookshelf
 
 ![demofullbookshelf2](https://user-images.githubusercontent.com/107027281/211184541-e73f8589-592a-40c1-85f5-70ee405242c4.png)
