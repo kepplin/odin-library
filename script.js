@@ -18,7 +18,10 @@ function updateSubmitBtn() {
   const authorVal = author.value.trim();
   const pagesVal = pages.value.trim();
 
-  if (titleVal && authorVal && pagesVal) {
+  console.log(titleVal);
+  console.log(authorVal);
+  console.log(pagesVal);
+  if (titleVal !== "" && authorVal !== "" && pagesVal !== "") {
     submitButton.removeAttribute("disabled");
   } else {
     submitButton.setAttribute("disabled", "disabled");
@@ -35,6 +38,7 @@ openModalButtons.forEach((button) => {
     const modal = document.querySelector(button.dataset.modalTarget);
     openModal(modal);
   });
+  button.addEventListener("click", updateSubmitBtn);
 });
 
 // modal closes when overlay is clicked
@@ -60,9 +64,9 @@ function openModal(modal) {
   overlay.classList.add("active");
 
   // Resetting values when modal is opened for a fresh form
-  title.value = "";
-  author.value = "";
-  pages.value = "";
+  title.value = null;
+  author.value = null;
+  pages.value = null;
   document.getElementById("read").checked = false;
 }
 
