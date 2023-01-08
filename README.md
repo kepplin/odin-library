@@ -23,13 +23,14 @@ With this task, I wanted to be unique so I decided to add books instead of just 
 
 I tried to get the background image (the bookcase) to repeat, essentially adding more layers when enough books were added, but it always ended up looking funky, so then I attempted to create my own bookshelf in CSS, but it was hard to style, so I just settled for a max book limit. One day, when I am a more experienced programmer, I will come back to this, and implemenet a repeating bookshelf.
 
-![demoemptybookshelf](https://user-images.githubusercontent.com/107027281/211130123-1b449623-789f-4036-ab81-12fb294b1563.png)
+![demoemptybookshelf2](https://user-images.githubusercontent.com/107027281/211184422-e17188ed-5679-4a06-8b76-45363085b1c4.png)
 Empty bookshelf
 
-![demofullbookshelf](https://user-images.githubusercontent.com/107027281/211130373-13c7fb95-1927-4f3c-a4db-f8e449b6c345.png)
+![demofullbookshelf2](https://user-images.githubusercontent.com/107027281/211184541-e73f8589-592a-40c1-85f5-70ee405242c4.png)
 Full bookshelf
 
 ## Credits:
 
 https://www.cssscript.com/animated-virtual-bookshelf/#google_vignette (Book styling + animations)
 https://www.transparenttextures.com/wood-pattern.html (timber texture)
+https://css.gg/trash (trashcan icon)

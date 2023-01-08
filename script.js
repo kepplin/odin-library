@@ -127,6 +127,8 @@ function createBook() {
   let coverSpineAuthor = document.createElement("div");
   let coverSpinePages = document.createElement("div");
 
+  let deleteButton = document.createElement("div");
+
   // Add classes to each book component
   book.classList.add("book");
   spine.classList.add("side", "spine");
@@ -138,6 +140,8 @@ function createBook() {
   coverSpineTitle.classList.add("spine-title", "cover-title");
   coverSpineAuthor.classList.add("cover-author");
   coverSpinePages.classList.add("pages");
+
+  deleteButton.classList.add("delete-button");
 
   // bookShelf > book > (spine > spineTitle + spineAuthor) + top + cover
   bookShelf.appendChild(book);
@@ -151,6 +155,7 @@ function createBook() {
   cover.appendChild(coverSpineTitle);
   cover.appendChild(coverSpineAuthor);
   cover.appendChild(coverSpinePages);
+  cover.appendChild(deleteButton);
 
   const titleCreate = document.getElementById("title").value;
   const authorCreate = document.getElementById("author").value;
@@ -158,7 +163,6 @@ function createBook() {
 
   const checkbox = document.getElementById("read");
 
-  console.log(authorCreate);
   // Style border depending on whether checkbox was checked
   if (checkbox.checked) {
     spine.style.border = "5px solid green";
@@ -192,6 +196,13 @@ function createBook() {
   }
   book.addEventListener("click", toggleBorderColor);
 
+  // Delete book
+  deleteButton.addEventListener("click", () => {
+    bookShelf.removeChild(book);
+    console.log(myLibrary);
+  });
+
+  // Random colors
   let availablePatterns = getRootCssStyles();
 
   let availableColors = [

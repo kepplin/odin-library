@@ -21,14 +21,14 @@ header {
   z-index: 1;
   align-items: center;
   gap: 20px;
-  background-color: #ffaa33;
+  background-color: #a76106;
   background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");
   text-shadow: rgba(0, 0, 0, 0.5) -1px 0, rgba(0, 0, 0, 0.3) 0 -1px,
     rgba(255, 255, 255, 0.5) 0 1px, rgba(0, 0, 0, 0.3) -1px -2px;
 }
 
 .logo {
-  color: rgb(148, 104, 43);
+  color: black;
   font-size: 1em;
 }
 .addButton {
