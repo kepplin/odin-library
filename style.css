@@ -114,20 +114,18 @@ input {
   background-color: rgba(0, 0, 0, 0.5);
   pointer-events: none;
   transition: 200ms ease-in-out;
-  z-index: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .overlay.active {
   opacity: 1;
   pointer-events: all;
 }
 .errorText {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   font-size: 40px;
   color: white;
-  transition: 200ms;
   background-color: black;
   border: 1px solid black;
   padding: 20px;

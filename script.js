@@ -6,7 +6,7 @@ const bookShelf = document.querySelector(".bookshelf");
 const openModalButtons = document.querySelectorAll("[data-modal-target]");
 const overlay = document.querySelector(".overlay");
 const submitButton = document.querySelector(".submitButton");
-const main = document.querySelector("main");
+const body = document.querySelector("body");
 
 // Checks if form has been filled
 const title = document.getElementById("title");
@@ -123,6 +123,10 @@ function createBook() {
   let top = document.createElement("div");
   let cover = document.createElement("div");
 
+  let coverSpineTitle = document.createElement("div");
+  let coverSpineAuthor = document.createElement("div");
+  let coverSpinePages = document.createElement("div");
+
   // Add classes to each book component
   book.classList.add("book");
   spine.classList.add("side", "spine");
@@ -131,18 +135,30 @@ function createBook() {
   top.classList.add("side", "top");
   cover.classList.add("side", "cover");
 
+  coverSpineTitle.classList.add("spine-title", "cover-title");
+  coverSpineAuthor.classList.add("cover-author");
+  coverSpinePages.classList.add("pages");
+
   // bookShelf > book > (spine > spineTitle + spineAuthor) + top + cover
   bookShelf.appendChild(book);
   book.appendChild(spine);
   book.appendChild(top);
   book.appendChild(cover);
+
   spine.appendChild(spineTitle);
   spine.appendChild(spineAuthor);
 
-  const title = document.getElementById("title").value;
-  const author = document.getElementById("author").value;
+  cover.appendChild(coverSpineTitle);
+  cover.appendChild(coverSpineAuthor);
+  cover.appendChild(coverSpinePages);
+
+  const titleCreate = document.getElementById("title").value;
+  const authorCreate = document.getElementById("author").value;
+  const pagesCreate = document.getElementById("pages").value;
+
   const checkbox = document.getElementById("read");
 
+  console.log(authorCreate);
   // Style border depending on whether checkbox was checked
   if (checkbox.checked) {
     spine.style.border = "5px solid green";
@@ -150,13 +166,18 @@ function createBook() {
     spine.style.border = "5px solid red";
   }
 
-  let firstLetters = author
+  let firstLetters = authorCreate
     .split(" ")
     .map((word) => word.charAt(0))
     .join("");
 
-  spineTitle.textContent = title;
+  spineTitle.textContent = titleCreate;
+  coverSpineTitle.textContent = titleCreate;
+
   spineAuthor.textContent = firstLetters.toUpperCase();
+  coverSpineAuthor.textContent = authorCreate;
+
+  coverSpinePages.textContent = `${pagesCreate} pages`;
 
   // Toggle between red and green border color when book is clicked (signifying read status)
   let toggle = false;
@@ -170,8 +191,6 @@ function createBook() {
     toggle = !toggle;
   }
   book.addEventListener("click", toggleBorderColor);
-
-  // BELOW THIS (within the funcion) IS NOT MY OWN CODE
 
   let availablePatterns = getRootCssStyles();
 
@@ -198,6 +217,7 @@ function createBook() {
   let randomColor = randomChoice(availableColors);
   spine.style.backgroundColor = randomColor;
 
+  cover.style.backgroundColor = randomColor;
   // random cover height
   cover.style.height = `${randomHeight}px`;
   cover.style.top = `${280 - randomHeight}px`;
@@ -222,12 +242,13 @@ function addBookToLibrary(title, author, pages, read) {
 
 // Displaying the books
 function renderBooks() {
-  // bookShelf.textContent = "";     // INCORRECT CODE, BUT I'LL LEAVE IT FOR LEARNING PURPOSES. Without bookShelf.textContent = "", the whole array myLibrary, is created. So if you have 5 elements in myLibrary, 5 books are created. However, with bookShelf.textContent = "", despite only one book being created, the books styling changes every time a new book is created, and its info (e.g. title, author, pages), becomes the same as the latest created book.
-  // myLibrary.map((book) => {
-  //   createBook(book);
-  // });
+  // bookShelf.textContent = "";     // INCORRECT CODE, BUT I'LL LEAVE IT FOR LEARNING PURPOSES. Without bookShelf.textContent = "", the whole array myLibrary, is created.
+  // myLibrary.map((book) => {       // So if you have 5 elements in myLibrary, 5 books are created.
+  //   createBook(book);             // However, with bookShelf.textContent = "", despite only one book being created, the books styling changes every time a new book is created.
+  // });                             // Its info (e.g. title, author, pages) and styling dont save and become the same as the latest created book.
 
-  // This block of code fixes the above issue as it gets the last iteration of myLibrary, and creates that.
+  // This block of code fixes the above issues as it gets the last iteration of myLibrary, and creates that.
+  //Book limit
   if (myLibrary.length < 40) {
     myLibrary.forEach(function (i, index, array) {
       if (index === array.length - 1) {
@@ -242,7 +263,7 @@ function renderBooks() {
     errorText.classList.add("errorText");
     errorText.textContent = "Book limit reached!";
 
-    main.appendChild(errorOverlay);
+    body.appendChild(errorOverlay);
     errorOverlay.appendChild(errorText);
 
     setTimeout(() => {
@@ -252,10 +273,12 @@ function renderBooks() {
   }
 }
 
+// Disable enter key
 window.addEventListener("keydown", function (e) {
   if (e.key == "Enter") {
     e.preventDefault();
     return false;
   }
 });
+
 submitButton.addEventListener("click", addBookToLibrary);
