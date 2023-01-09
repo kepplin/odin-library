@@ -22,7 +22,7 @@ Full bookshelf
 
 ## About
 
-This was a project created for [The Odin Project](https://www.theodinproject.com/lessons/node-path-javascript-library). It is a two part project where the first part is to create a library website where the user can add 'books', and the second part is to save these books using local or cloud storage through technologies such as localStorage or firebase.
+This was a project created for [The Odin Project](https://www.theodinproject.com/lessons/node-path-javascript-library). The aim of this project was to utilise object constructors. It is a two part project where the first part is to create a library website where the user can add 'books', and the second part is to save these books using local or cloud storage through technologies such as localStorage or firebase.
 
 ## How it Works:
 
