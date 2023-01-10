@@ -12,6 +12,10 @@ Empty bookshelf
 ![demofullbookshelf2](https://user-images.githubusercontent.com/107027281/211184541-e73f8589-592a-40c1-85f5-70ee405242c4.png)
 Full bookshelf
 
+## About
+
+This was a project created for [The Odin Project](https://www.theodinproject.com/lessons/node-path-javascript-library). The aim of this project was to utilise object constructors. It is a two part project where the first part is to create a library website where the user can add 'books', and the second part is to save these books using local or cloud storage through technologies such as localStorage or firebase.
+
 ## Instructions
 
 - Press the add book button to open up a form. Fill in the form and press submit to add a book to the bookshelf. If you check the 'read book?' checkbox in the form, the book's border color will be green, otherwise it will be red.
@@ -19,10 +23,6 @@ Full bookshelf
 - Pressing a book in the bookshelf toggles its border color.
 
 - Hovering over a book rotates it to display a cover with all the info you inputed into the form.
-
-## About
-
-This was a project created for [The Odin Project](https://www.theodinproject.com/lessons/node-path-javascript-library). The aim of this project was to utilise object constructors. It is a two part project where the first part is to create a library website where the user can add 'books', and the second part is to save these books using local or cloud storage through technologies such as localStorage or firebase.
 
 ## How it Works:
 
